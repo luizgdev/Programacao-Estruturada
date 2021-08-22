@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 #include <ctype.h>
-#define QTD 3
+#define QTD 100
 int main()
 {
     setlocale(LC_ALL, "Portuguese");
@@ -14,7 +14,7 @@ int main()
         scanf("%lf", &preco[i]);
     }
     printf("Deseja efetuar o aumento automático de 10%%? (S/N)\n");
-    escolha = getchar();
+    scanf(" %c", &escolha);
     escolha = toupper(escolha);
     if (escolha == 'S')
     {
