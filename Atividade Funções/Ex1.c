@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
 #define MAX 5
 double calculaMedia(double *alturas)
@@ -19,6 +20,7 @@ int main()
         scanf("%lf", &alturas[i]);
     }
     media = calculaMedia(alturas);
+    system("cls");
     printf("A média aritmética das %d alturas é: %.2lf metros.\n", MAX, media);
     return 0;
 }

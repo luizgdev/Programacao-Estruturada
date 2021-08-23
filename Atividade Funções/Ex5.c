@@ -6,7 +6,7 @@ void classificacaoLocal(char *nome)
 {
     long int quantidade_de_habitantes;
     scanf("%ld", &quantidade_de_habitantes);
-    system("clear");
+    system("cls");
     if (quantidade_de_habitantes > 0 && quantidade_de_habitantes <= 5000)
         printf("Nome: %s.\nQuantidade de habitantes: %ld.\nClassificação: VILA.\n", nome, quantidade_de_habitantes);
     else if (quantidade_de_habitantes > 5000 && quantidade_de_habitantes <= 15000)

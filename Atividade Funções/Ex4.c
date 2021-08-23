@@ -22,7 +22,7 @@ void obtemNivel(int idade)
 }
 void apresentaClassificacao(int idade)
 {
-    system("clear");
+    system("cls");
     printf("\nSiga a tabela abaixo para determinar sua classificação de acordo com a idade:\n");
     printf("\n| IDADE <= 10       | CRIANÇA     |\n");
     printf("| 10 > IDADE < 18   | ADOLESCENTE |\n");

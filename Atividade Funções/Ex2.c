@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
 double funcao_exponencial(double x, int n)
 {
@@ -24,6 +25,7 @@ int main()
     printf("Insira o valor do expoente: ");
     scanf("%d", &n);
     valor_exponencial = funcao_exponencial(x, n);
+    system("cls");
     printf("O resultado de %.2lf elevado a %d é: %.2lf.\n", x, n, valor_exponencial);
     return 0;
 }

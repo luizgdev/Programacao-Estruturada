@@ -5,7 +5,7 @@ void apresentaPorcentagem(int quantidade_de_alunos, int alunos_aprovados, int al
 {
     double porcentagem_aprovados = (((double)alunos_aprovados / 100) * (double)quantidade_de_alunos);
     double porcentagem_reprovados = (((double)alunos_reprovados / 100) * (double)quantidade_de_alunos);
-    system("clear");
+    system("cls");
     printf("De %d alunos:\n", quantidade_de_alunos);
     printf("%.2lf%% dos alunos foram aprovados.\n", porcentagem_aprovados);
     printf("%.2lf%% dos alunos foram reprovados.\n", porcentagem_reprovados);

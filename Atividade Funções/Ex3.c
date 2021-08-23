@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
 #define QTD_ALUNOS 20
 #define QTD_NOTAS_POR_ALUNOS 2
@@ -49,6 +50,7 @@ int main()
         media_ponderada4x6[i] = mediaPonderada4x6(i, notas);
         media_ponderada3x7[i] = mediaPonderada3x7(i, notas);
     }
+    system("cls");
     printf("\n|                        Médias                         |\n");
     printf("| Alunos  | Aritmética | Ponderada(4x6) | Ponderada(3x7)|\n");
     for (i = 0; i < QTD_ALUNOS; i++)
