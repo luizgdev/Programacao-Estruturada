@@ -1,8 +1,3 @@
-/*
-Desenvolva  um  programa  que  solicite  o  nome  de  cinco  equipamentos  de  informática.
-Compare  os  cinco nomes  fornecidos  para  verificar  se  existe  algum  solicitado  em 
-duplicidade  e  informe  o  usuário  somente  o nome duplicado.
-*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
