@@ -8,7 +8,8 @@
 
 void leituraTexto(char *texto);
 void editaTexto(char *texto);
-void mostraTexto(char *texto);
+int contaPalavras(char *texto, int contador);
+void mostraTexto(char *texto, int contador);
 
 int main()
 {
@@ -16,7 +17,8 @@ int main()
     char texto[MAX];
     leituraTexto(texto);
     editaTexto(texto);
-    mostraTexto(texto);
+    int contador = contaPalavras(texto, contador);
+    mostraTexto(texto, contador);
     return 0;
 }
 void leituraTexto(char *texto)
@@ -33,8 +35,19 @@ void editaTexto(char *texto)
         if (isspace(texto[i]))
             texto[i + 1] = toupper(texto[i + 1]);
 }
-void mostraTexto(char *texto)
+int contaPalavras(char *texto, int contador)
+{
+    contador = 0;
+    for (int i = 0; texto[i] != '\n'; i++)
+        if (isspace(texto[i]))
+            contador++;
+    return ++contador;
+}
+void mostraTexto(char *texto, int contador)
 {
     system("clear");
     printf("%s", texto);
+    for (int i = 0; i < 40 + strlen("O texto tem %d palavras.\n"); i++)
+        printf(" ");
+    printf("O texto tem %d palavras.\n", contador);
 }
