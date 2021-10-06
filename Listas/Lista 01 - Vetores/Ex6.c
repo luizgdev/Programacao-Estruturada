@@ -42,7 +42,7 @@ int main()
     }
     maior = maiorSalario(salario);
     menor = menorSalario(salario);
-    system("clear");
+    system("cls");
     for (i = 0; i < 100; i++)
     {
         printf("%dª Matrícula: %d |", (i + 1), matricula[i]);
