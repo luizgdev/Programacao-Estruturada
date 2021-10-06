@@ -11,6 +11,7 @@ void leituraNome(char *nome);
 void formataNome(char *nome);
 void apresentaNome(char *nome);
 bool paraPrograma();
+void limpaJanela();
 
 int main()
 {
@@ -36,7 +37,7 @@ void formataNome(char *nome)
 }
 void apresentaNome(char *nome)
 {
-    system("clear");
+    limpaJanela();
     for (int i = 0; i < 60; i++)
         printf(" ");
     printf("%s", nome);
@@ -63,4 +64,12 @@ bool paraPrograma()
         getchar();
         return false;
     }
+}
+void limpaJanela()
+{
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
 }

@@ -11,6 +11,7 @@
 void leituraNomes(char nome[PESSOAS][MAX], char sobrenome[PESSOAS][MAX]);
 void apresentaNomes(char nome[PESSOAS][MAX], char sobrenome[PESSOAS][MAX]);
 bool escolha();
+void limpaJanela();
 
 int main()
 {
@@ -19,7 +20,7 @@ int main()
     char sobrenome[PESSOAS][MAX];
     do
     {
-        system("clear");
+        limpaJanela();
         leituraNomes(nome, sobrenome);
         apresentaNomes(nome, sobrenome);
     } while (escolha() == true);
@@ -38,7 +39,7 @@ void leituraNomes(char nome[PESSOAS][MAX], char sobrenome[PESSOAS][MAX])
 }
 void apresentaNomes(char nome[PESSOAS][MAX], char sobrenome[PESSOAS][MAX])
 {
-    system("clear");
+    limpaJanela();
     for (int i = 0; i < PESSOAS; i++)
     {
         for (int j = 0; j < MAX; j++)
@@ -69,4 +70,12 @@ bool escolha()
         puts("Informe apenas \"Sim\" ou \"Não\".");
         escolha();
     }
+}
+void limpaJanela()
+{
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
 }

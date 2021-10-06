@@ -10,6 +10,7 @@ void leituraTexto(char *texto);
 void editaTexto(char *texto);
 int contaPalavras(char *texto, int contador);
 void mostraTexto(char *texto, int contador);
+void limpaJanela();
 
 int main()
 {
@@ -45,9 +46,17 @@ int contaPalavras(char *texto, int contador)
 }
 void mostraTexto(char *texto, int contador)
 {
-    system("clear");
+    limpaJanela();
     printf("%s", texto);
     for (int i = 0; i < 40 + strlen("O texto tem %d palavras.\n"); i++)
         printf(" ");
     printf("O texto tem %d palavras.\n", contador);
+}
+void limpaJanela()
+{
+#ifdef _WIN32
+    system("cls");
+#else
+    system("clear");
+#endif
 }
