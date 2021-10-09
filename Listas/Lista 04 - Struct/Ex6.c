@@ -68,6 +68,8 @@ int main()
         case 4:
             pesquisaIdentidade(vetor);
             break;
+        case 5:
+            break;
         default:
             printf("Opção inválida.\n");
             break;
